@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<svg viewBox="0 0 132 120" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="display:block">
+  <!-- gray W (WU), nested inside the U, bottom connected -->
+  <rect x="42" y="26" width="11" height="48" fill="{{ gray }}"></rect>
+  <rect x="60.5" y="26" width="11" height="48" fill="{{ gray }}"></rect>
+  <rect x="79" y="26" width="11" height="48" fill="{{ gray }}"></rect>
+  <rect x="42" y="62" width="48" height="12" fill="{{ gray }}"></rect>
+  <!-- black U cup, wrapping the W -->
+  <rect x="18" y="40" width="20" height="72" fill="{{ ink }}"></rect>
+  <rect x="94" y="40" width="20" height="72" fill="{{ ink }}"></rect>
+  <rect x="18" y="92" width="96" height="20" fill="{{ ink }}"></rect>
+</svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:160,&quot;height&quot;:146},&quot;ink&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#0E0E10&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;gray&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#A7ABB0&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      ink: this.props.ink ?? '#0E0E10',
+      gray: this.props.gray ?? '#A7ABB0',
+    };
+  }
+}
+</script>
+</body>
+</html>

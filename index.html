@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>吾悠科技 WuYou Tech｜航太系統與智慧應用解決方案</title>
-<meta name="description" content="吾悠科技｜台灣專業代理經銷商。航太系統解決方案（無人船、聲納）與智慧應用解決方案（人形機器人、物業與長照自動化）。">
+<title>吾悠科技 WuYou Tech｜系統整合商 · AI 水域數據平台 · 全球化夥伴服務</title>
+<meta name="description" content="吾悠科技｜台灣系統整合商。整合航太系統（無人船、聲納）、智慧應用（人形機器人）與 AI 水域數據平台，並提供全球化採購顧問與通路整合服務。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,20 +15,20 @@
    ============================================================ */
 
 :root{
-  --ink:#0a1422;
-  --ink-soft:#1b2a3d;
-  --paper:#f4f6f9;
+  --ink:#0E0E10;          /* logo ink — near-black */
+  --ink-soft:#1C1C20;
+  --paper:#F1F1F2;
   --paper-pure:#ffffff;
-  --sea:#0e6e8c;          /* primary — deep sea teal */
-  --sea-bright:#15a3c4;
-  --abyss:#06212e;        /* dark hero */
-  --steel:#3a5a72;
-  --signal:#ff7a45;       /* accent — warm signal orange */
-  --line:rgba(10,20,34,.12);
-  --line-soft:rgba(10,20,34,.07);
-  --muted:#5a6b7d;
-  --shadow:0 18px 50px -22px rgba(6,33,46,.45);
-  --shadow-sm:0 8px 24px -14px rgba(6,33,46,.4);
+  --sea:#3A3D43;          /* primary — steel gray */
+  --sea-bright:#A7ABB0;   /* logo gray — the W */
+  --abyss:#0E0E10;        /* dark sections — logo ink */
+  --steel:#5A5D65;
+  --signal:#ffffff;       /* CTA on dark bg — pure white */
+  --line:rgba(14,14,16,.12);
+  --line-soft:rgba(14,14,16,.07);
+  --muted:#72767D;
+  --shadow:0 18px 50px -22px rgba(14,14,16,.30);
+  --shadow-sm:0 8px 24px -14px rgba(14,14,16,.20);
   --radius:18px;
   --maxw:1200px;
   --display:'Sora','Noto Sans TC',sans-serif;
@@ -58,19 +58,19 @@ img{max-width:100%;display:block}
 /* ===================== HEADER ===================== */
 header.site{
   position:sticky;top:0;z-index:100;
-  background:rgba(244,246,249,.82);
-  backdrop-filter:saturate(180%) blur(14px);
+  background:rgba(241,241,242,.88);
+  backdrop-filter:saturate(140%) blur(14px);
   border-bottom:1px solid var(--line-soft);
 }
 .bar{display:flex;align-items:center;gap:28px;height:72px}
 .brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:800;letter-spacing:.5px}
 .brand .mark{
   width:38px;height:38px;border-radius:11px;flex:none;
-  background:radial-gradient(circle at 30% 25%,var(--sea-bright),var(--sea) 55%,var(--abyss));
-  position:relative;box-shadow:0 6px 18px -6px var(--sea);
+  background:linear-gradient(145deg,#A7ABB0 0%,#0E0E10 65%);
+  position:relative;box-shadow:0 6px 18px -6px rgba(14,14,16,.5);
 }
 .brand .mark::after{
-  content:"";position:absolute;inset:8px;border:2px solid rgba(255,255,255,.85);
+  content:"";position:absolute;inset:8px;border:2px solid rgba(255,255,255,.75);
   border-radius:50%;border-top-color:transparent;border-right-color:transparent;
 }
 .brand .name{font-size:19px;line-height:1.1}
@@ -83,7 +83,7 @@ nav.main > .navitem > a{
   padding:10px 14px;border-radius:10px;font-weight:500;font-size:14.5px;
   transition:background .2s,color .2s;
 }
-nav.main > .navitem > a:hover{background:rgba(14,110,140,.1);color:var(--sea)}
+nav.main > .navitem > a:hover{background:rgba(14,14,16,.07);color:var(--ink)}
 .navitem .caret{font-size:9px;opacity:.6;transition:transform .25s}
 .navitem:hover .caret{transform:rotate(180deg)}
 
@@ -117,11 +117,11 @@ nav.main > .navitem > a:hover{background:rgba(14,110,140,.1);color:var(--sea)}
 
 /* ===================== HERO ===================== */
 .hero{
-  position:relative;color:#eaf4f8;overflow:hidden;
+  position:relative;color:#EBEBEC;overflow:hidden;
   background:
-    radial-gradient(1100px 600px at 75% -10%,rgba(21,163,196,.35),transparent 60%),
-    radial-gradient(900px 700px at 10% 110%,rgba(14,110,140,.4),transparent 55%),
-    linear-gradient(160deg,#06212e 0%,#0a3242 55%,#093140 100%);
+    radial-gradient(1100px 600px at 75% -10%,rgba(167,171,176,.13),transparent 60%),
+    radial-gradient(900px 700px at 10% 110%,rgba(90,93,101,.18),transparent 55%),
+    linear-gradient(160deg,#0E0E10 0%,#18181C 55%,#141416 100%);
 }
 .hero::before{
   content:"";position:absolute;inset:0;opacity:.5;
@@ -136,7 +136,7 @@ nav.main > .navitem > a:hover{background:rgba(14,110,140,.1);color:var(--sea)}
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);
   font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--sea-bright);
-  border:1px solid rgba(21,163,196,.4);border-radius:999px;padding:7px 16px;margin-bottom:30px;
+  border:1px solid rgba(167,171,176,.32);border-radius:999px;padding:7px 16px;margin-bottom:30px;
 }
 .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 12px var(--signal)}
 .hero h1{
@@ -144,19 +144,19 @@ nav.main > .navitem > a:hover{background:rgba(14,110,140,.1);color:var(--sea)}
   font-size:clamp(38px,6vw,68px);line-height:1.07;max-width:16ch;margin-bottom:26px;
 }
 .hero h1 em{font-style:normal;color:var(--sea-bright)}
-.hero p.lead{font-size:clamp(16px,2vw,20px);color:#bcd4de;max-width:54ch;margin-bottom:38px}
+.hero p.lead{font-size:clamp(16px,2vw,20px);color:#9A9DA5;max-width:54ch;margin-bottom:38px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .btn{
   display:inline-flex;align-items:center;gap:9px;border-radius:999px;
   padding:15px 28px;font-weight:600;font-size:15px;transition:.22s;cursor:pointer;border:none;
 }
-.btn-primary{background:var(--signal);color:#2a1206}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--signal)}
+.btn-primary{background:var(--signal);color:#0E0E10}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(255,255,255,.35)}
 .btn-ghost{background:rgba(255,255,255,.08);color:#eaf4f8;border:1px solid rgba(255,255,255,.22)}
 .btn-ghost:hover{background:rgba(255,255,255,.16)}
 .hero-stats{display:flex;gap:42px;margin-top:64px;flex-wrap:wrap}
 .hero-stats .stat .n{font-family:var(--display);font-size:34px;font-weight:800;color:#fff}
-.hero-stats .stat .l{font-size:13px;color:#9fbac6;letter-spacing:.5px}
+.hero-stats .stat .l{font-size:13px;color:#8A8E95;letter-spacing:.5px}
 
 /* ===================== SECTION SHELL ===================== */
 section.block{padding:96px 0}
@@ -172,14 +172,26 @@ section.block{padding:96px 0}
   min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;
   padding:38px;box-shadow:var(--shadow);
 }
-.dept.aero{background:linear-gradient(165deg,#073a4c,#0e6e8c 130%)}
-.dept.robot{background:linear-gradient(165deg,#11243b,#3a5a72 130%)}
+.dept.aero{background:linear-gradient(165deg,#0E0E10,#27282D 130%)}
+.dept.robot{background:linear-gradient(165deg,#141416,#30313A 130%)}
 .dept::before{
   content:"";position:absolute;inset:0;opacity:.16;mix-blend-mode:screen;
   background-repeat:no-repeat;background-position:top right;background-size:60%;
 }
-.dept.aero::before{background-image:radial-gradient(circle at 80% 15%,#7fe3ff,transparent 45%)}
-.dept.robot::before{background-image:radial-gradient(circle at 80% 15%,#ffd6a8,transparent 45%)}
+.dept.aero::before{background-image:radial-gradient(circle at 80% 15%,#C9CDD4,transparent 45%)}
+.dept.robot::before{background-image:radial-gradient(circle at 80% 15%,#A7ABB0,transparent 45%)}
+.dept.data-plat{
+  grid-column:1/-1;min-height:200px;
+  background:linear-gradient(160deg,#0E0E10 0%,#18181D 60%,#0E0E10 100%);
+  border:1px solid rgba(167,171,176,.14);
+}
+.dept.data-plat::before{
+  background-image:
+    linear-gradient(rgba(167,171,176,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(167,171,176,.05) 1px,transparent 1px);
+  background-size:36px 36px;
+  opacity:1;-webkit-mask-image:none;mask-image:none;
+}
 .dept .deptno{position:absolute;top:30px;left:38px;font-family:var(--mono);font-size:13px;letter-spacing:2px;opacity:.7}
 .dept .ico{position:absolute;top:26px;right:34px;font-size:30px;opacity:.85}
 .dept h3{font-family:var(--display);font-size:27px;font-weight:700;margin-bottom:10px}
@@ -207,7 +219,7 @@ section.block{padding:96px 0}
 .card .thumb{
   aspect-ratio:16/10;position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,#dfeaf0,#eef3f6);
+  background:linear-gradient(135deg,#E5E6E8,#EEEEEF);
 }
 .card .thumb .glyph{font-size:54px;filter:saturate(.6) opacity(.85)}
 .card .thumb .badge{
@@ -227,15 +239,15 @@ section.block{padding:96px 0}
 /* ===================== WARRANTY / SERVICE ===================== */
 .assure{background:var(--abyss);color:#dcebf0;position:relative;overflow:hidden}
 .assure::before{
-  content:"";position:absolute;inset:0;opacity:.4;
-  background:radial-gradient(700px 400px at 85% 20%,rgba(21,163,196,.3),transparent 60%);
+  content:"";position:absolute;inset:0;opacity:.5;
+  background:radial-gradient(700px 400px at 85% 20%,rgba(167,171,176,.18),transparent 60%);
 }
 .assure .wrap{position:relative;z-index:2}
 .assure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
 .assure-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:30px 28px}
 .assure-card .ic{font-size:30px;margin-bottom:16px}
 .assure-card h4{font-family:var(--display);font-size:19px;margin-bottom:9px;color:#fff}
-.assure-card p{font-size:14.5px;color:#a9c5d0}
+.assure-card p{font-size:14.5px;color:#9A9DA5}
 
 /* ===================== CONTACT ===================== */
 .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:46px;align-items:start}
@@ -258,7 +270,7 @@ section.block{padding:96px 0}
 .form .btn-primary{width:100%;justify-content:center;margin-top:6px}
 
 /* ===================== FOOTER ===================== */
-footer.site{background:#050f17;color:#90a8b5;padding:70px 0 34px}
+footer.site{background:#090909;color:#8A8D93;padding:70px 0 34px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:38px;margin-bottom:50px}
 .foot-brand .brand{color:#fff;margin-bottom:18px}
 .foot-brand p{font-size:14px;max-width:34ch;line-height:1.8}
@@ -317,14 +329,16 @@ footer ul li a:hover{color:var(--sea-bright)}
         </div>
       </div>
       <div class="navitem">
-        <a href="#catalog"><span class="zh">代理產品</span><span class="en">Products</span> <span class="caret">▼</span></a>
+        <a href="#catalog"><span class="zh">整合方案</span><span class="en">Solutions</span> <span class="caret">▼</span></a>
         <div class="dropdown">
-          <a href="#catalog" data-filter="usv"><b><span class="zh">無人船</span><span class="en">Unmanned Surface Vessels</span></b><span class="zh">民用 · 內河運輸 · 客製</span><span class="en">Civil · Inland · Custom</span></a>
-          <a href="#catalog" data-filter="sonar"><b><span class="zh">聲納</span><span class="en">Sonar</span></b><span class="zh">海洋牧場 · 漁場監測</span><span class="en">Aquaculture monitoring</span></a>
-          <a href="#catalog" data-filter="robot"><b><span class="zh">智慧人形機器人</span><span class="en">Humanoid Robots</span></b><span class="zh">物流 · 物業 · 康養</span><span class="en">Logistics · Facility · Care</span></a>
+          <a href="#catalog" data-filter="usv"><b><span class="zh">無人船系統</span><span class="en">USV Systems</span></b><span class="zh">民用 · 內河運輸 · 客製</span><span class="en">Civil · Inland · Custom</span></a>
+          <a href="#catalog" data-filter="sonar"><b><span class="zh">聲納感知系統</span><span class="en">Sonar Systems</span></b><span class="zh">海洋牧場 · 漁場監測</span><span class="en">Aquaculture monitoring</span></a>
+          <a href="#catalog" data-filter="robot"><b><span class="zh">智慧機器人系統</span><span class="en">Robotics Systems</span></b><span class="zh">物流 · 物業 · 康養</span><span class="en">Logistics · Facility · Care</span></a>
+          <a href="#catalog" data-filter="data"><b><span class="zh">AI 水域數據平台</span><span class="en">AI Aquatic Data Platform</span></b><span class="zh">數據訂閱 · 碳積分</span><span class="en">Data subscription · Carbon credits</span></a>
+          <a href="#catalog" data-filter="custom-svc"><b><span class="zh">客製化服務</span><span class="en">Custom Services</span></b><span class="zh">全球採購 · 通路整合</span><span class="en">Global sourcing · Channel integration</span></a>
         </div>
       </div>
-      <div class="navitem"><a href="#assure"><span class="zh">服務保障</span><span class="en">Service</span></a></div>
+      <div class="navitem"><a href="#assure"><span class="zh">系統保障</span><span class="en">Assurance</span></a></div>
       <div class="navitem"><a href="#about"><span class="zh">關於吾悠</span><span class="en">About</span></a></div>
       <div class="navitem"><a href="#contact"><span class="zh">聯繫我們</span><span class="en">Contact</span></a></div>
 
@@ -332,7 +346,7 @@ footer ul li a:hover{color:var(--sea-bright)}
         <button class="langtoggle" id="langBtn">
           <span class="zh">EN｜<b>中</b></span><span class="en"><b>EN</b>｜中</span>
         </button>
-        <a href="#contact" class="cta-mini"><span class="zh">諮詢代理</span><span class="en">Inquire</span></a>
+        <a href="#contact" class="cta-mini"><span class="zh">諮詢方案</span><span class="en">Inquire</span></a>
       </div>
     </nav>
 
@@ -343,23 +357,23 @@ footer ul li a:hover{color:var(--sea-bright)}
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="wrap">
-    <span class="eyebrow"><span class="dot"></span><span class="zh">台灣代理經銷商 · 原廠授權</span><span class="en">Taiwan Authorized Distributor</span></span>
+    <span class="eyebrow"><span class="dot"></span><span class="zh">系統整合商 · 台灣在地部署夥伴</span><span class="en">Systems Integrator · Taiwan Deployment Partner</span></span>
     <h1>
-      <span class="zh">從<em>海面</em>到<em>產線</em>，<br>一站式智慧系統代理。</span>
-      <span class="en">From the <em>sea surface</em> to the <em>production line</em> —<br>one partner for intelligent systems.</span>
+      <span class="zh">整合系統，<br>構建<em>數據護城河</em>。</span>
+      <span class="en">Integrate systems.<br>Build a <em>data moat</em>.</span>
     </h1>
     <p class="lead">
-      <span class="zh">吾悠科技整合航太系統與智慧應用兩大領域，代理並客製化無人船、聲納與智慧人形機器人，並提供完整的台灣在地質保與原廠服務。</span>
-      <span class="en">WuYou Tech bridges aerospace systems and smart applications — distributing and customizing unmanned vessels, sonar, and humanoid robots, backed by full local warranty and OEM service in Taiwan.</span>
+      <span class="zh">吾悠科技以系統整合為核心，橫跨航太、智慧應用與 AI 水域數據三大業務，協助企業在台灣落地、透過數據平台建立長期競爭壁壘，並連結全球夥伴生態系。</span>
+      <span class="en">WuYou Tech leads with systems integration — spanning aerospace, smart applications, and AI aquatic data — to help organizations deploy in Taiwan, build lasting data moats, and connect with a global partner ecosystem.</span>
     </p>
     <div class="hero-actions">
-      <a href="#solutions" class="btn btn-primary"><span class="zh">探索解決方案</span><span class="en">Explore Solutions</span> →</a>
-      <a href="#contact" class="btn btn-ghost"><span class="zh">預約簡報</span><span class="en">Request a Briefing</span></a>
+      <a href="#solutions" class="btn btn-primary"><span class="zh">探索整合方案</span><span class="en">Explore Solutions</span> →</a>
+      <a href="#contact" class="btn btn-ghost"><span class="zh">預約諮詢</span><span class="en">Request a Briefing</span></a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="n">2</div><div class="l"><span class="zh">核心部門</span><span class="en">Core Divisions</span></div></div>
-      <div class="stat"><div class="n">6+</div><div class="l"><span class="zh">代理產品線</span><span class="en">Product Lines</span></div></div>
-      <div class="stat"><div class="n">100%</div><div class="l"><span class="zh">台灣在地質保</span><span class="en">Local Warranty</span></div></div>
+      <div class="stat"><div class="n">3</div><div class="l"><span class="zh">核心業務方向</span><span class="en">Core Verticals</span></div></div>
+      <div class="stat"><div class="n">10+</div><div class="l"><span class="zh">整合解決方案</span><span class="en">Integrated Solutions</span></div></div>
+      <div class="stat"><div class="n">100%</div><div class="l"><span class="zh">台灣在地服務</span><span class="en">Taiwan-based Service</span></div></div>
     </div>
   </div>
 </section>
@@ -369,8 +383,8 @@ footer ul li a:hover{color:var(--sea-bright)}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-tag">Solutions</span>
-      <h2><span class="zh">兩大解決方案部門</span><span class="en">Two Solution Divisions</span></h2>
-      <p><span class="zh">我們以「解決方案」而非單一產品為導向，依場域需求整合代理產品與自有品牌客製研發。</span><span class="en">We lead with solutions rather than single products — integrating distributed lines and in-house customization around each field's needs.</span></p>
+      <h2><span class="zh">三大核心業務方向</span><span class="en">Three Core Business Verticals</span></h2>
+      <p><span class="zh">我們以「整合」為核心，橫跨硬體系統、AI 數據層與全球夥伴服務，協助客戶在每個場域建立可持續的競爭壁壘。</span><span class="en">We lead with integration — spanning hardware systems, AI data layers, and global partner services — to help clients build sustainable competitive advantage in every field.</span></p>
     </div>
 
     <div class="dept-grid">
@@ -399,6 +413,20 @@ footer ul li a:hover{color:var(--sea-bright)}
         </div>
         <a href="#catalog" class="more" data-filter="robot"><span class="zh">查看機器人方案</span><span class="en">View robotics products</span> →</a>
       </div>
+
+      <div class="dept data-plat reveal" id="dataplatform">
+        <span class="deptno">DIV. 03</span><span class="ico">🧠</span>
+        <h3><span class="zh">AI 水域數據平台</span><span class="en">AI Aquatic Data Platform</span></h3>
+        <div class="sub"><span class="zh">WUYOU Data Platform · 核心 IP</span><span class="en">WUYOU Data Platform · Core IP</span></div>
+        <p><span class="zh">每次自主任務即回傳水深、水流、礁石、魚群等原始數據，累積成第三方無法複製的私有 Data Center。支援年費訂閱與碳積分收益化，利潤率 80%+。Tesla 的核心不是車，是 FSD 數據飛輪——吾悠的護城河在數據，不在硬體。</span><span class="en">Every autonomous mission feeds water depth, current, reef, and fish-stock data into a proprietary Data Center no competitor can replicate. Annual subscription and carbon credit monetization at 80%+ margin. Tesla's moat isn't the car — it's the FSD data flywheel. Ours is the same.</span></p>
+        <div class="tags">
+          <span class="zh">數據訂閱年費</span><span class="en">Annual Subscription</span>
+          <span class="zh">碳積分收益</span><span class="en">Carbon Credits</span>
+          <span class="zh">私有數據 IP</span><span class="en">Proprietary Data IP</span>
+          <span class="zh">全球授權開放</span><span class="en">Global Licensing</span>
+        </div>
+        <a href="#catalog" class="more" data-filter="data"><span class="zh">了解數據平台</span><span class="en">Explore data platform</span> →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -407,16 +435,18 @@ footer ul li a:hover{color:var(--sea-bright)}
 <section class="block" id="catalog" style="background:linear-gradient(180deg,#fff,var(--paper))">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">Products</span>
-      <h2><span class="zh">代理產品與客製方案</span><span class="en">Distributed & Custom Products</span></h2>
-      <p><span class="zh">每項方案皆附簡介、示範影片與展演示意圖。以下為產品結構，未來可直接擴充新品。</span><span class="en">Each line includes briefs, demo videos, and showcase visuals. The catalog below is built to expand as new products are added.</span></p>
+      <span class="sec-tag">Solutions & Services</span>
+      <h2><span class="zh">整合解決方案與服務</span><span class="en">Integrated Solutions & Services</span></h2>
+      <p><span class="zh">從硬體系統、AI 數據平台到客製化全球服務，每項解決方案皆可依場域需求客製整合。</span><span class="en">From hardware systems and AI data platforms to custom global services — every solution is built around your field's specific needs.</span></p>
     </div>
 
     <div class="cat-tabs reveal" id="catTabs">
       <button class="cat-tab active" data-filter="all"><span class="zh">全部</span><span class="en">All</span></button>
-      <button class="cat-tab" data-filter="usv"><span class="zh">無人船</span><span class="en">USV</span></button>
-      <button class="cat-tab" data-filter="sonar"><span class="zh">聲納</span><span class="en">Sonar</span></button>
-      <button class="cat-tab" data-filter="robot"><span class="zh">人形機器人</span><span class="en">Humanoid Robots</span></button>
+      <button class="cat-tab" data-filter="usv"><span class="zh">無人船系統</span><span class="en">USV</span></button>
+      <button class="cat-tab" data-filter="sonar"><span class="zh">聲納感知</span><span class="en">Sonar</span></button>
+      <button class="cat-tab" data-filter="robot"><span class="zh">機器人系統</span><span class="en">Robotics</span></button>
+      <button class="cat-tab" data-filter="data"><span class="zh">AI 數據平台</span><span class="en">AI Data</span></button>
+      <button class="cat-tab" data-filter="custom-svc"><span class="zh">客製化服務</span><span class="en">Custom Services</span></button>
     </div>
 
     <div class="prod-grid" id="prodGrid"><!-- injected by JS from data model --></div>
@@ -427,14 +457,14 @@ footer ul li a:hover{color:var(--sea-bright)}
 <section class="block assure" id="assure">
   <div class="wrap">
     <div class="sec-head reveal" style="max-width:760px">
-      <span class="sec-tag" style="color:var(--sea-bright)">Service Guarantee</span>
-      <h2 style="color:#fff"><span class="zh">原廠服務 · 台灣在地質保</span><span class="en">OEM Service · Local Warranty</span></h2>
-      <p style="color:#a9c5d0"><span class="zh">採購不只是交付一台設備。我們以原廠技術背書，搭配台灣地區的保固與維運團隊，讓系統長期穩定運作。</span><span class="en">Procurement is more than delivery. We pair OEM technical backing with a Taiwan-based warranty and maintenance team for long-term, stable operation.</span></p>
+      <span class="sec-tag" style="color:var(--sea-bright)">System Enablement</span>
+      <h2 style="color:#fff"><span class="zh">系統賦能 · 長期夥伴關係</span><span class="en">System Enablement · Long-term Partnership</span></h2>
+      <p style="color:#9A9DA5"><span class="zh">導入系統只是起點。吾悠以全程整合支援、在地維運與數據洞察，讓每套系統在台灣長期穩定創造價值。</span><span class="en">Deployment is just the beginning. WuYou's full-cycle integration support, local maintenance, and data insights keep every system generating value over the long run.</span></p>
     </div>
     <div class="assure-grid">
-      <div class="assure-card reveal"><div class="ic">🏭</div><h4><span class="zh">原廠技術背書</span><span class="en">OEM Technical Backing</span></h4><p><span class="zh">直接對接原廠技術資源，確保產品規格、軟韌體更新與技術文件到位。</span><span class="en">Direct access to manufacturer resources for specs, firmware updates, and documentation.</span></p></div>
-      <div class="assure-card reveal"><div class="ic">🛡️</div><h4><span class="zh">台灣地區質保</span><span class="en">Taiwan-Region Warranty</span></h4><p><span class="zh">由吾悠負責台灣地區保固，本地維修與備品供應，縮短停機時間。</span><span class="en">WuYou handles regional warranty, local repair, and spare-part supply to minimize downtime.</span></p></div>
-      <div class="assure-card reveal"><div class="ic">🧭</div><h4><span class="zh">方案導入支援</span><span class="en">Deployment Support</span></h4><p><span class="zh">從場域評估、客製研發到上線導入，提供全程顧問與教育訓練。</span><span class="en">From site assessment and customization to go-live, with consulting and training throughout.</span></p></div>
+      <div class="assure-card reveal"><div class="ic">🔧</div><h4><span class="zh">系統整合技術支援</span><span class="en">Integration Technical Support</span></h4><p><span class="zh">直接對接技術資源，確保軟硬體整合、韌體更新與跨系統相容性，讓每個部署穩定上線。</span><span class="en">Direct access to technical resources ensuring hardware-software integration, firmware updates, and cross-system compatibility at every deployment.</span></p></div>
+      <div class="assure-card reveal"><div class="ic">🛡️</div><h4><span class="zh">台灣在地部署保障</span><span class="en">Taiwan Deployment Assurance</span></h4><p><span class="zh">由吾悠負責台灣地區的維運、備品供應與現場支援，確保系統穩定運作、停機時間最短。</span><span class="en">WuYou handles Taiwan-based operations, spare parts, and on-site support to ensure stable system performance and minimal downtime.</span></p></div>
+      <div class="assure-card reveal"><div class="ic">🌐</div><h4><span class="zh">全球化夥伴協作</span><span class="en">Global Partner Network</span></h4><p><span class="zh">連結亞太與國際供應商、通路夥伴與技術合作方，協助客戶跨境佈局、採購優化與市場進入。</span><span class="en">Connecting Asia-Pacific and international suppliers, channel partners, and tech collaborators for cross-border deployment, procurement optimization, and market entry.</span></p></div>
     </div>
   </div>
 </section>
@@ -445,8 +475,8 @@ footer ul li a:hover{color:var(--sea-bright)}
     <div class="reveal">
       <span class="sec-tag">About Us</span>
       <h2 style="font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,42px);line-height:1.12;letter-spacing:-.5px;margin-bottom:22px"><span class="zh">關於吾悠科技</span><span class="en">About WuYou Tech</span></h2>
-      <p style="color:var(--muted);font-size:16.5px;margin-bottom:18px"><span class="zh">吾悠科技為台灣專業代理經銷商，串接國際優質產品與在地需求。我們不只代理，更憑藉團隊的研發與造船能力，提供客製化解決方案。</span><span class="en">WuYou Tech is a professional Taiwan-based distributor connecting world-class products with local demand. Beyond distribution, our R&D and shipbuilding capabilities enable true customization.</span></p>
-      <p style="color:var(--muted);font-size:16.5px"><span class="zh">透過清晰的解決方案架構，我們協助客戶在海洋經濟、內河運輸、智慧物流與長照康養等場域快速落地。</span><span class="en">Through a clear solution framework, we help clients deploy quickly across marine economy, inland transport, smart logistics, and eldercare.</span></p>
+      <p style="color:var(--muted);font-size:16.5px;margin-bottom:18px"><span class="zh">吾悠科技是台灣系統整合商，整合硬體、軟體與 AI 數據層，協助企業在海洋、物流與康養場域構建可持續的智慧系統基礎架構。我們不只導入設備——我們幫客戶建立數據護城河。</span><span class="en">WuYou Tech is a Taiwan-based systems integrator — combining hardware, software, and AI data layers to help organizations build sustainable intelligent infrastructure across maritime, logistics, and eldercare. We don't just deploy equipment; we help clients build lasting data moats.</span></p>
+      <p style="color:var(--muted);font-size:16.5px"><span class="zh">透過全球夥伴網絡，吾悠連結亞太與國際供應商，提供採購顧問、通路整合與市場進入服務，協助海外品牌在台落地，也幫台灣企業走向全球。</span><span class="en">Through a global partner network, WuYou connects Asia-Pacific and international suppliers — offering sourcing advisory, channel integration, and market-entry services to help international brands land in Taiwan and Taiwanese companies scale globally.</span></p>
     </div>
     <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
       <div style="background:var(--paper-pure);border:1px solid var(--line-soft);border-radius:18px;padding:26px;box-shadow:var(--shadow-sm)"><div style="font-family:var(--display);font-size:30px;font-weight:800;color:var(--sea)">🌊</div><div style="font-weight:700;margin:8px 0 4px"><span class="zh">海洋經濟守護</span><span class="en">Marine Economy</span></div><div style="font-size:13.5px;color:var(--muted)"><span class="zh">巡弋 · 守護 · 水文探測</span><span class="en">Patrol · Protect · Survey</span></div></div>
@@ -460,7 +490,7 @@ footer ul li a:hover{color:var(--sea-bright)}
 <!-- ============ CONTACT ============ -->
 <section class="block" id="contact" style="background:linear-gradient(180deg,var(--paper),#fff)">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-tag">Contact</span><h2><span class="zh">聯繫我們 · 預約諮詢</span><span class="en">Get in Touch</span></h2><p><span class="zh">想了解代理項目或安排簡報？留下需求，我們會盡快與您聯繫。</span><span class="en">Want to learn about our distribution lines or schedule a briefing? Leave your details and we'll reach out.</span></p></div>
+    <div class="sec-head reveal"><span class="sec-tag">Contact</span><h2><span class="zh">聯繫我們 · 預約諮詢</span><span class="en">Get in Touch</span></h2><p><span class="zh">想了解整合方案、AI 數據平台或全球化服務？留下需求，我們會盡快與您聯繫。</span><span class="en">Want to explore integrated solutions, the AI data platform, or global services? Leave your details and we'll reach out.</span></p></div>
     <div class="contact-grid">
       <div class="contact-info reveal">
         <div class="row"><div class="ic">📍</div><div><h5><span class="zh">公司地址</span><span class="en">Address</span></h5><p><span class="zh">台灣（地址待補）</span><span class="en">Taiwan (address TBD)</span></p></div></div>
@@ -477,10 +507,12 @@ footer ul li a:hover{color:var(--sea-bright)}
           <div class="field"><label><span class="zh">Email</span><span class="en">Email</span></label><input required type="email"></div>
           <div class="field"><label><span class="zh">感興趣的方案</span><span class="en">Interested Solution</span></label>
             <select>
-              <option><span></span><span class="zh-opt">無人船</span></option>
-              <option>聲納 / Sonar</option>
-              <option>智慧人形機器人 / Humanoid Robots</option>
-              <option>客製化研發 / Custom R&D</option>
+              <option>無人船系統整合 / USV System Integration</option>
+              <option>聲納感知系統 / Sonar Systems</option>
+              <option>機器人系統導入 / Robotics Integration</option>
+              <option>AI 水域數據平台 / AI Aquatic Data Platform</option>
+              <option>客製化服務 / Custom Services</option>
+              <option>全球採購顧問 / Global Sourcing Advisory</option>
             </select>
           </div>
           <div class="field"><label><span class="zh">需求描述</span><span class="en">Message</span></label><textarea></textarea></div>
@@ -497,17 +529,19 @@ footer ul li a:hover{color:var(--sea-bright)}
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="#top" class="brand"><span class="mark"></span><span class="name"><span class="zh">吾悠科技</span><span class="en">WuYou Tech</span><small>WuYou Tech · Taiwan</small></span></a>
-        <p><span class="zh">台灣專業代理經銷商，整合航太系統與智慧應用解決方案。</span><span class="en">Professional Taiwan distributor of aerospace systems and smart application solutions.</span></p>
+        <p><span class="zh">台灣系統整合商，橫跨航太系統、智慧應用與 AI 水域數據平台，連結全球夥伴生態系。</span><span class="en">Taiwan systems integrator spanning aerospace, smart applications, and AI aquatic data platforms — connected to a global partner ecosystem.</span></p>
       </div>
-      <div><h6><span class="zh">解決方案</span><span class="en">Solutions</span></h6><ul>
-        <li><a href="#aero"><span class="zh">航太系統</span><span class="en">Aerospace Systems</span></a></li>
-        <li><a href="#robot"><span class="zh">智慧應用</span><span class="en">Smart Applications</span></a></li>
-        <li><a href="#assure"><span class="zh">服務保障</span><span class="en">Service Guarantee</span></a></li>
+      <div><h6><span class="zh">業務方向</span><span class="en">Verticals</span></h6><ul>
+        <li><a href="#aero"><span class="zh">航太系統整合</span><span class="en">Aerospace Systems</span></a></li>
+        <li><a href="#robot"><span class="zh">智慧應用整合</span><span class="en">Smart Applications</span></a></li>
+        <li><a href="#dataplatform"><span class="zh">AI 水域數據平台</span><span class="en">AI Data Platform</span></a></li>
+        <li><a href="#assure"><span class="zh">系統保障</span><span class="en">System Assurance</span></a></li>
       </ul></div>
-      <div><h6><span class="zh">代理產品</span><span class="en">Products</span></h6><ul>
-        <li><a href="#catalog"><span class="zh">無人船</span><span class="en">USV</span></a></li>
-        <li><a href="#catalog"><span class="zh">聲納</span><span class="en">Sonar</span></a></li>
-        <li><a href="#catalog"><span class="zh">人形機器人</span><span class="en">Humanoid Robots</span></a></li>
+      <div><h6><span class="zh">整合方案</span><span class="en">Solutions</span></h6><ul>
+        <li><a href="#catalog"><span class="zh">無人船系統</span><span class="en">USV Systems</span></a></li>
+        <li><a href="#catalog"><span class="zh">聲納感知</span><span class="en">Sonar</span></a></li>
+        <li><a href="#catalog"><span class="zh">機器人系統</span><span class="en">Robotics</span></a></li>
+        <li><a href="#catalog"><span class="zh">客製化服務</span><span class="en">Custom Services</span></a></li>
       </ul></div>
       <div><h6><span class="zh">公司</span><span class="en">Company</span></h6><ul>
         <li><a href="#about"><span class="zh">關於吾悠</span><span class="en">About</span></a></li>
@@ -556,10 +590,24 @@ const PRODUCTS = [
   { filter:"robot", dept:"robot", glyph:"❤️‍🩹", type:"custom",
     zh:{name:"智慧康養長照方案", dept:"優必選 UBTECH · 康養長照", desc:"針對末端規劃的護理與長照導入方案，提升照護效率。"},
     en:{name:"Smart Eldercare Solution", dept:"UBTECH · Eldercare", desc:"Nursing and long-term care deployment designed for last-mile care delivery."} },
+  // ---- AI 水域數據平台 ----
+  { filter:"data", dept:"data", glyph:"📊", type:"custom",
+    zh:{name:"WUYOU 水域數據平台", dept:"AI 數據平台 · 核心 IP", desc:"每次自主巡航即累積水深、水流、礁石、魚群等原始數據，形成私有 Data Center。年費訂閱制，利潤率 80%+，碳積分可另行收益化。"},
+    en:{name:"WUYOU Aquatic Data Platform", dept:"AI Data Platform · Core IP", desc:"Every autonomous mission builds a proprietary Data Center — water depth, current, reef, and fish-stock data no competitor can replicate. Annual subscription model at 80%+ margin, with additional carbon credit monetization."} },
+  { filter:"data", dept:"data", glyph:"🌊", type:"custom",
+    zh:{name:"水域 AI 感知分析服務", dept:"AI 數據平台 · 智慧感知", desc:"結合聲納與影像 AI，即時分析水下生態與環境變化，輸出可行動的洞察報告，支援漁業、港口與海洋牧場決策。"},
+    en:{name:"Aquatic AI Sensing & Analytics", dept:"AI Data Platform · Smart Sensing", desc:"Combining sonar and vision AI for real-time underwater ecosystem analysis — delivering actionable insights for fisheries, ports, and ocean farms."} },
+  // ---- 客製化服務 ----
+  { filter:"custom-svc", dept:"svc", glyph:"🌐", type:"custom",
+    zh:{name:"全球化採購顧問服務", dept:"客製化服務 · 全球夥伴", desc:"協助海外企業在亞太地區找到最適合的硬體方案與合作夥伴，提供獨立評估報告與採購諮詢，降低跨境風險與進入成本。"},
+    en:{name:"Global Sourcing Advisory", dept:"Custom Services · Global Partners", desc:"Helping international companies identify optimal hardware solutions and partners in the Asia-Pacific region with independent assessment reports and procurement advisory to reduce cross-border risk."} },
+  { filter:"custom-svc", dept:"svc", glyph:"🤝", type:"custom",
+    zh:{name:"通路整合與市場進入", dept:"客製化服務 · 通路拓展", desc:"為海外品牌提供台灣及東南亞市場進入支援，包含通路評估、法規合規、本地化導入與長期夥伴媒合。"},
+    en:{name:"Channel Integration & Market Entry", dept:"Custom Services · Market Expansion", desc:"Supporting international brands with Taiwan and Southeast Asia market entry — channel assessment, regulatory compliance, localization, and long-term partner matching."} },
 ];
 
 const T = {
-  brand: { zh:"代理", en:"Distributed" },
+  brand: { zh:"整合", en:"Integrated" },
   custom:{ zh:"客製", en:"Custom" },
   viewMore:{ zh:"了解方案", en:"Learn more" },
   media:{ zh:"影片 / 示意預留", en:"Media slot" }
@@ -571,7 +619,7 @@ function renderProducts(filter='all'){
   const grid = document.getElementById('prodGrid');
   const lang = currentLang();
   grid.innerHTML = PRODUCTS
-    .filter(p => filter==='all' || p.filter===filter || (filter==='aero'&&p.dept==='aero'))
+    .filter(p => filter==='all' || p.filter===filter)
     .map(p=>{
       const d = p[lang];
       const badge = p.type==='custom' ? T.custom[lang] : T.brand[lang];
@@ -613,8 +661,7 @@ document.querySelectorAll('[data-filter]').forEach(el=>{
   if(el.classList.contains('cat-tab')) return;
   el.addEventListener('click',()=>{
     const f = el.dataset.filter;
-    const map = {aero:'usv'}; // aero dept -> default show usv tab; keep simple
-    const target = (f==='aero')?'all':f;
+    const target = f || 'all';
     setTimeout(()=>{
       document.querySelectorAll('.cat-tab').forEach(b=>{
         b.classList.toggle('active', b.dataset.filter===(target));
