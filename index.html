@@ -496,13 +496,14 @@ footer ul li a:hover{color:var(--sea-bright)}
       </div>
       <div class="form reveal">
         <h3><span class="zh">諮詢表單</span><span class="en">Inquiry Form</span></h3>
-        <p class="note"><span class="zh">＊此為展示用表單，送出後僅於本機提示，未串接後端。</span><span class="en">*Demo form — submission shows a local prompt only; no backend connected yet.</span></p>
-        <form id="inq" onsubmit="return submitInq(event)">
-          <div class="field"><label><span class="zh">姓名</span><span class="en">Name</span></label><input required type="text"></div>
-          <div class="field"><label><span class="zh">公司 / 單位</span><span class="en">Company</span></label><input type="text"></div>
-          <div class="field"><label><span class="zh">Email</span><span class="en">Email</span></label><input required type="email"></div>
+        <form id="inq" action="https://formspree.io/f/mvznnavr" method="POST" onsubmit="return submitInq(event)">
+          <!-- honeypot：機器人會填，人類不會，Formspree 自動過濾 -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="field"><label><span class="zh">姓名</span><span class="en">Name</span></label><input required type="text" name="name"></div>
+          <div class="field"><label><span class="zh">公司 / 單位</span><span class="en">Company</span></label><input type="text" name="company"></div>
+          <div class="field"><label><span class="zh">Email</span><span class="en">Email</span></label><input required type="email" name="email"></div>
           <div class="field"><label><span class="zh">感興趣的方案</span><span class="en">Interested Solution</span></label>
-            <select>
+            <select name="solution">
               <option>無人船系統整合 / USV System Integration</option>
               <option>聲納感知系統 / Sonar Systems</option>
               <option>機器人系統導入 / Robotics Integration</option>
@@ -511,8 +512,8 @@ footer ul li a:hover{color:var(--sea-bright)}
               <option>全球採購顧問 / Global Sourcing Advisory</option>
             </select>
           </div>
-          <div class="field"><label><span class="zh">需求描述</span><span class="en">Message</span></label><textarea></textarea></div>
-          <button class="btn btn-primary" type="submit"><span class="zh">送出諮詢</span><span class="en">Send Inquiry</span></button>
+          <div class="field"><label><span class="zh">需求描述</span><span class="en">Message</span></label><textarea name="message"></textarea></div>
+          <button class="btn btn-primary" type="submit" id="inqBtn"><span class="zh">送出諮詢</span><span class="en">Send Inquiry</span></button>
         </form>
       </div>
     </div>
@@ -685,12 +686,31 @@ document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{
   document.getElementById('nav').classList.remove('open');
 }));
 
-/* form */
-function submitInq(e){
+/* form — Formspree AJAX */
+async function submitInq(e){
   e.preventDefault();
-  const lang=currentLang();
-  alert(lang==='zh'?'感謝您的諮詢！（此為展示版本，尚未串接後端）':'Thanks for your inquiry! (Demo only — no backend connected yet)');
-  e.target.reset();
+  const form = e.target;
+  const btn  = document.getElementById('inqBtn');
+  const lang = currentLang();
+  btn.disabled = true;
+  btn.innerHTML = lang==='zh' ? '送出中…' : 'Sending…';
+  try {
+    const res = await fetch(form.action, {
+      method:'POST', body:new FormData(form),
+      headers:{'Accept':'application/json'}
+    });
+    if(res.ok){
+      form.innerHTML = `<p style="padding:24px 0;font-size:16px;color:var(--ink)">${lang==='zh'?'✓ 感謝您的諮詢！我們將盡快與您聯繫。':'✓ Thank you! We\'ll be in touch soon.'}</p>`;
+    } else {
+      btn.disabled = false;
+      btn.innerHTML = lang==='zh' ? '<span class="zh">送出諮詢</span>' : '<span class="en">Send Inquiry</span>';
+      alert(lang==='zh'?'送出失敗，請稍後再試或直接發送 Email 給我們。':'Submission failed. Please try again or email us directly.');
+    }
+  } catch(_){
+    btn.disabled = false;
+    btn.innerHTML = lang==='zh' ? '<span class="zh">送出諮詢</span>' : '<span class="en">Send Inquiry</span>';
+    alert(lang==='zh'?'網路錯誤，請稍後再試。':'Network error. Please try again.');
+  }
   return false;
 }
 
